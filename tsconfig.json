@@ -21,7 +21,15 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Simply import Lit components from anywhere in the project */
+    "baseUrl": "./src",
+    "paths": {
+      "@atom_components/*": ["atom-components/*"],
+      "@app/*": ["app/*"],
+      "@setup/*": ["setup/*"]
+    }
   },
   "include": ["src"]
 }
