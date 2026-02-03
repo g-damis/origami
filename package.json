@@ -1,20 +1,44 @@
 {
-  "name": "lit-app",
-  "private": true,
-  "version": "0.0.0",
+  "name": "my-lit-components",
+  "version": "1.0.0",
+  "description": "Libreria di Web Components Lit riutilizzabili",
   "type": "module",
+  "main": "./dist/my-lit-components.umd.js",
+  "module": "./dist/my-lit-components.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/my-lit-components.es.js",
+      "require": "./dist/my-lit-components.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "lit": "^3.3.1"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^5.0.0",
+    "@storybook/addon-a11y": "^10.2.4",
+    "@storybook/addon-docs": "^10.2.4",
+    "@storybook/addon-vitest": "^10.2.4",
+    "@storybook/web-components": "^10.2.4",
+    "@storybook/web-components-vite": "^10.2.4",
     "@types/node": "^25.2.0",
+    "@vitest/browser-playwright": "^4.0.18",
+    "@vitest/coverage-v8": "^4.0.18",
+    "playwright": "^1.58.1",
+    "storybook": "^10.2.4",
     "typescript": "~5.9.3",
-    "vite": "npm:rolldown-vite@7.2.5"
+    "vite": "npm:rolldown-vite@7.2.5",
+    "vitest": "^4.0.18"
   },
   "overrides": {
     "vite": "npm:rolldown-vite@7.2.5"

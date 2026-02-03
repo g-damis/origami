@@ -1,11 +1,20 @@
-import {LitElement, html} from 'lit';
-import {customElement} from 'lit/decorators.js';
+import { LitElement, html, css } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 
 @customElement('my-footer')
-class MyFooter extends LitElement {
+export class MyFooter extends LitElement {
+  @property({ type: String }) text = 'Default footer text';
+
+  static styles = css`
+    footer {
+      padding: 1rem;
+      background-color: #222;
+      color: white;
+      text-align: center;
+    }
+  `;
+
   render() {
-    return html`
-      <footer>footer</footer>
-    `;
+    return html`<footer>${this.text}</footer>`;
   }
 }

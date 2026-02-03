@@ -1,15 +1,18 @@
-import { MyPage } from "../app/my-page";
-import { MyHeader } from "../atom-components/my-header"
-import { MyArticle } from "../atom-components/my-article"
-import { MyFooter } from "../atom-components/my-footer"
+/** 
+ * TypeScript updates the global HTMLElementTagNameMap, used by APIs such as document.createElement, querySelector, etc.
+ * The export {} file prevents TypeScript from treating it as a global script and isolates it correctly.
+ * Explicitly importing components ensures that the MyHeader type, etc., is known and usable. 
+
+*/
+
+import { MyHeader } from '@atom_components/my-header';
+import { MyFooter } from '@atom_components/my-footer';
 
 declare global {
-    interface HTMLElementTagNameMap {
-        'my-page': MyPage,
-        'my-header': MyHeader,
-        'my-article': MyArticle,
-        'my-footer': MyFooter
-    }
+  interface HTMLElementTagNameMap {
+    'my-header': MyHeader;
+    'my-footer': MyFooter;
+  }
 }
 
-/** global.d.ts necessario per avere tipi precisi */
+export {};

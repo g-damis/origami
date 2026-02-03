@@ -27,7 +27,6 @@
     "baseUrl": "./src",
     "paths": {
       "@atom_components/*": ["atom-components/*"],
-      "@app/*": ["app/*"],
       "@setup/*": ["setup/*"]
     }
   },
