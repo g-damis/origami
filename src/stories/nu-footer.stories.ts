@@ -21,7 +21,7 @@ const Template: StoryFn<NuFooterProps> = (args) => {
 
 export const Default = Template.bind({});
 Default.args = {
-  text: '© 2026 My Company'
+  text: '© 2026 Digiservice Solutions'
 };
 
 export const CustomText = Template.bind({});

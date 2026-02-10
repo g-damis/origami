@@ -6,30 +6,12 @@ export class NuHeader extends LitElement {
   @property({ type: Boolean }) loggedIn = false;
 
   static styles = css`
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem;
-      background-color: #2a2a2a;
-      color: white;
+    :host {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-base);
     }
-
-    .actions button {
-      margin-left: 0.5rem;
-      padding: 0.4rem 1rem;
-      font-size: 0.9rem;
-      border: none;
-      background-color: #4caf50;
-      color: white;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-
-    .actions button:hover {
-      background-color: #45a049;
-    }
-  `;
+  `
 
   private onLoginClick() {
     this.dispatchEvent(new CustomEvent('login', { bubbles: true, composed: true }));

@@ -6,14 +6,13 @@ export class NuFooter extends LitElement {
   @property({ type: String }) text = 'Default footer text';
 
   static styles = css`
-    footer {
-      padding: 1rem;
-      background-color: #222;
-      color: white;
-      text-align: center;
+    :host {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-base);
     }
-  `;
-
+  `
+  
   render() {
     return html`<footer>${this.text}</footer>`;
   }
