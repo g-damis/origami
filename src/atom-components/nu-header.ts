@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import '@atom_components/nu-button.ts';
 
 @customElement('nu-header')
 export class NuHeader extends LitElement {
@@ -7,11 +8,28 @@ export class NuHeader extends LitElement {
 
   static styles = css`
     :host {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--font-base);
+      display: block;
+      font-family: var(--nu-font-family-sans);
+      color: var(--nu-color-text);
     }
-  `
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--nu-spacing-4);
+      padding: var(--nu-spacing-4);
+      background: var(--nu-color-surface);
+      border-radius: var(--nu-radius-lg);
+      box-shadow: var(--nu-shadow-sm);
+    }
+
+    .brand {
+      font-size: var(--nu-font-size-lg);
+      font-weight: var(--nu-font-weight-bold);
+      color: var(--nu-color-secondary);
+    }
+  `;
 
   private onLoginClick() {
     this.dispatchEvent(new CustomEvent('login', { bubbles: true, composed: true }));
@@ -24,11 +42,11 @@ export class NuHeader extends LitElement {
   render() {
     return html`
       <header>
-        <div><strong>My App</strong></div>
-        <div class="actions">
+        <div class="brand">Nucleus</div>
+        <div>
           ${this.loggedIn
-            ? html`<button @click=${this.onLogoutClick}>Logout</button>`
-            : html`<button @click=${this.onLoginClick}>Login</button>`}
+            ? html`<nu-button variant="secondary" @nu-click=${this.onLogoutClick}>Logout</nu-button>`
+            : html`<nu-button @nu-click=${this.onLoginClick}>Login</nu-button>`}
         </div>
       </header>
     `;

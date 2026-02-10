@@ -29,6 +29,9 @@ export default defineConfig({
   resolve: {
     alias: {
       '@atom_components': path.resolve(rootDir, 'src/atom-components'),
+      '@molecule_components': path.resolve(rootDir, 'src/molecule-components'),
+      '@layout': path.resolve(rootDir, 'src/layout'),
+      '@style': path.resolve(rootDir, 'src/style'),
       '@stories': path.resolve(rootDir, 'src/stories')
     }
   },

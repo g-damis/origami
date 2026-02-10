@@ -6,7 +6,7 @@ interface NuHeaderProps {
 }
 
 export default {
-  title: 'Atom/NuHeader',
+  title: 'Atoms/NuHeader',
   component: 'nu-header',
   argTypes: {
     loggedIn: { control: 'boolean' }

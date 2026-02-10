@@ -6,7 +6,7 @@ interface NuFooterProps {
 }
 
 export default {
-  title: 'Atom/NuFooter',
+  title: 'Atoms/NuFooter',
   component: 'nu-footer',
   argTypes: {
     text: { control: 'text' }

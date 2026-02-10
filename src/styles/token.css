@@ -1,8 +1,85 @@
+/* === DESIGN TOKENS ROOT === */
+
+/* Color Palette */
 :root {
-  --color-primary: #4f46e5;
-  --color-secondary: #64748b;
-  --font-base: 'Inter', sans-serif;
-  --border-radius: 0.5rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
+  /* Base palette */
+  --nu-color-white: #ffffff;
+  --nu-color-black: #000000;
+
+  --nu-color-gray-50:  #f8f9fa;
+  --nu-color-gray-100: #f1f3f5;
+  --nu-color-gray-200: #e9ecef;
+  --nu-color-gray-300: #dee2e6;
+  --nu-color-gray-600: #6c757d;
+  --nu-color-gray-900: #212529;
+
+  /* Custom palette */
+  --nu-color-rosy-granite: #9a8f97;
+  --nu-color-silver: #c3baba;
+  --nu-color-alabaster-grey: #e9e3e6;
+  --nu-color-silver-2: #b2b2b2;
+  --nu-color-crushed-berry: #881616;
+
+  /* Semantic aliases */
+  --nu-color-primary: var(--nu-color-rosy-granite);
+  --nu-color-secondary: var(--nu-color-crushed-berry);
+  --nu-color-surface: var(--nu-color-alabaster-grey);
+  --nu-color-text: var(--nu-color-silver-2);
+  --nu-color-accent: var(--nu-color-silver);
+  --nu-color-on-secondary: #ffffff;
+  --nu-button-secondary-text: var(--nu-color-on-secondary);
+}
+
+/* Spacing (based on 4px scale) */
+:root {
+  --nu-spacing-0: 0px;
+  --nu-spacing-1: 4px;
+  --nu-spacing-2: 8px;
+  --nu-spacing-3: 12px;
+  --nu-spacing-4: 16px;
+  --nu-spacing-5: 20px;
+  --nu-spacing-6: 24px;
+  --nu-spacing-8: 32px;
+  --nu-spacing-10: 40px;
+}
+
+/* Typography */
+:root {
+  --nu-font-family-sans: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+  --nu-font-size-xs: 0.75rem;
+  --nu-font-size-sm: 0.875rem;
+  --nu-font-size-base: 1rem;
+  --nu-font-size-lg: 1.125rem;
+  --nu-font-size-xl: 1.25rem;
+
+  --nu-font-weight-normal: 400;
+  --nu-font-weight-bold: 700;
+}
+
+/* Radius & Shadows */
+:root {
+  --nu-radius-none: 0px;
+  --nu-radius-sm: 2px;
+  --nu-radius-md: 4px;
+  --nu-radius-lg: 8px;
+  --nu-radius-full: 9999px;
+
+  --nu-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --nu-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --nu-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Z-index */
+:root {
+  --nu-z-index-dropdown: 1000;
+  --nu-z-index-modal: 1100;
+  --nu-z-index-toast: 1200;
+}
+
+/* Transitions */
+:root {
+  --nu-transition-fast: 150ms;
+  --nu-transition-base: 250ms;
+  --nu-transition-slow: 400ms;
 }
