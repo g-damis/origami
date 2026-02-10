@@ -1,8 +1,8 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
-@customElement('my-footer')
-export class MyFooter extends LitElement {
+@customElement('nu-footer')
+export class NuFooter extends LitElement {
   @property({ type: String }) text = 'Default footer text';
 
   static styles = css`

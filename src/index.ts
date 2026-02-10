@@ -4,8 +4,8 @@
 
 /** Exporting classes for typing also */
 
-export { MyHeader } from '@atom_components/my-header.ts';
-export { MyFooter } from '@atom_components/my-footer';
+export { NuHeader } from '@atom_components/nu-header.ts';
+export { NuFooter } from '@atom_components/nu-footer.ts';
 
-import '@atom_components/my-footer';
-import '@atom_components/my-header';
+import '@atom_components/nu-footer.ts';
+import '@atom_components/nu-header.ts';

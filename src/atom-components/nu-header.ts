@@ -1,8 +1,8 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
-@customElement('my-header')
-export class MyHeader extends LitElement {
+@customElement('nu-header')
+export class NuHeader extends LitElement {
   @property({ type: Boolean }) loggedIn = false;
 
   static styles = css`

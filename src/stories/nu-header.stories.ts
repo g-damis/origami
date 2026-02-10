@@ -1,20 +1,20 @@
 import type { Meta, StoryFn } from '@storybook/web-components';
-import '../atom-components/my-header.ts';
+import '../atom-components/nu-header.ts';
 
-interface MyHeaderProps {
+interface NuHeaderProps {
   loggedIn: boolean;
 }
 
 export default {
-  title: 'Atom/MyHeader',
-  component: 'my-header',
+  title: 'Atom/NuHeader',
+  component: 'nu-header',
   argTypes: {
     loggedIn: { control: 'boolean' }
   }
-} satisfies Meta<MyHeaderProps>;
+} satisfies Meta<NuHeaderProps>;
 
-const Template: StoryFn<MyHeaderProps> = (args) => {
-  const el = document.createElement('my-header') as any;
+const Template: StoryFn<NuHeaderProps> = (args) => {
+  const el = document.createElement('nu-header') as any;
   Object.assign(el, args);
 
   el.addEventListener('login', () => console.log('Login triggered'));
