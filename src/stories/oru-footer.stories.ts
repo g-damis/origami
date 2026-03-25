@@ -1,5 +1,5 @@
 import type { Meta, StoryFn } from '@storybook/web-components';
-import '../atom-components/oru-footer.ts';
+import '@atom_components/oru-footer';
 
 interface OruFooterProps {
   text: string;

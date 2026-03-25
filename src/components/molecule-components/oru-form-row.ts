@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import '@atom_components/oru-button.ts';
-import { oruFormRowStyles } from '../styles/components/oru-form-row.styles.ts';
+import { oruFormRowStyles } from '../../styles/components/oru-form-row.styles.ts';
 
 let oruFormRowInputId = 0;
 

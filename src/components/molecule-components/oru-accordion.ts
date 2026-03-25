@@ -2,7 +2,7 @@ import { LitElement, html, nothing } from 'lit';
 import type { PropertyValues } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import '@atom_components/oru-collapse.ts';
-import { oruAccordionStyles } from '../styles/components/oru-accordion.styles.ts';
+import { oruAccordionStyles } from '../../styles/components/oru-accordion.styles.ts';
 
 export type OruAccordionVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'body1' | 'body2';
 

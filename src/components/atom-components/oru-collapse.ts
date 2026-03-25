@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit';
 import type { PropertyValues } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { oruCollapseStyles } from '../styles/components/oru-collapse.styles.ts';
+import { oruCollapseStyles } from '../../styles/components/oru-collapse.styles.ts';
 
 @customElement('oru-collapse')
 export class OruCollapse extends LitElement {

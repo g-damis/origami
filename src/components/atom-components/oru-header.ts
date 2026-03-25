@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import '@atom_components/oru-button.ts';
-import { oruHeaderStyles } from '../styles/components/oru-header.styles.ts';
+import { oruHeaderStyles } from '../../styles/components/oru-header.styles.ts';
 
 @customElement('oru-header')
 export class OruHeader extends LitElement {

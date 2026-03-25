@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { oruButtonStyles } from '../styles/components/oru-button.styles.ts';
+import { oruButtonStyles } from '../../styles/components/oru-button.styles.ts';
 
 @customElement('oru-button')
 export class OruButton extends LitElement {

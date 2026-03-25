@@ -1,5 +1,5 @@
 import type { Meta, StoryFn } from '@storybook/web-components';
-import '../atom-components/oru-header.ts';
+import '@atom_components/oru-header';
 
 interface OruHeaderProps {
   loggedIn: boolean;

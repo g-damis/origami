@@ -28,6 +28,7 @@
     "paths": {
       "@atom_components/*": ["components/atom-components/*"],
       "@molecule_components/*": ["components/molecule-components/*"],
+
       "@layout/*": ["layout/*"],
       "@style/*": ["style/*"],
       "@setup/*": ["setup/*"]

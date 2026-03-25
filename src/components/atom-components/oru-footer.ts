@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { oruFooterStyles } from '../styles/components/oru-footer.styles.ts';
+import { oruFooterStyles } from '../../styles/components/oru-footer.styles.ts';
 
 @customElement('oru-footer')
 export class OruFooter extends LitElement {
