@@ -1,20 +1,20 @@
 import type { Meta, StoryFn } from '@storybook/web-components';
-import '../atom-components/nu-footer.ts';
+import '../atom-components/oru-footer.ts';
 
-interface NuFooterProps {
+interface OruFooterProps {
   text: string;
 }
 
 export default {
-  title: 'Atoms/NuFooter',
-  component: 'nu-footer',
+  title: 'Atoms/OruFooter',
+  component: 'oru-footer',
   argTypes: {
     text: { control: 'text' }
   }
-} satisfies Meta<NuFooterProps>;
+} satisfies Meta<OruFooterProps>;
 
-const Template: StoryFn<NuFooterProps> = (args) => {
-  const el = document.createElement('nu-footer') as any;
+const Template: StoryFn<OruFooterProps> = (args) => {
+  const el = document.createElement('oru-footer') as any;
   Object.assign(el, args);
   return el;
 };

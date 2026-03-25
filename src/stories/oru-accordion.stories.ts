@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import type { NuAccordionItem } from '@molecule_components/nu-accordion';
-import '@molecule_components/nu-accordion';
+import type { OruAccordionItem } from '@molecule_components/oru-accordion';
+import '@molecule_components/oru-accordion';
 
-const defaultItems: NuAccordionItem[] = [
+const defaultItems: OruAccordionItem[] = [
   {
     title: 'Sezione 1',
     content: 'Contenuto della prima sezione',
@@ -20,8 +20,8 @@ const defaultItems: NuAccordionItem[] = [
 ];
 
 const meta: Meta = {
-  title: 'Molecules/NuAccordion',
-  component: 'nu-accordion',
+  title: 'Molecules/OruAccordion',
+  component: 'oru-accordion',
   tags: ['autodocs'],
   argTypes: {
     items: { control: 'object' },
@@ -31,7 +31,7 @@ const meta: Meta = {
     disabled: { control: 'boolean' },
     typographyProps: { control: 'object' },
     otherProps: { control: 'object' },
-    'nu-change': { action: 'changed' }
+    'oru-change': { action: 'changed' }
   }
 };
 
@@ -46,10 +46,10 @@ export const Default: Story = {
     expanded: false,
     disabled: false,
     typographyProps: { variant: 'h2' },
-    otherProps: { 'data-testid': 'nu-accordion-default' }
+    otherProps: { 'data-testid': 'oru-accordion-default' }
   },
   render: ({ items, multiple, title, expanded, disabled, typographyProps, otherProps }) => html`
-    <nu-accordion
+    <oru-accordion
       .items=${items}
       ?multiple=${multiple}
       title=${title}
@@ -59,7 +59,7 @@ export const Default: Story = {
       .otherProps=${otherProps}
       .onChange=${(_event: Event, isExpanded: boolean) => console.log('Expanded:', isExpanded)}>
       <p style="margin: 0;">Contenuto passato come children (slot di default).</p>
-    </nu-accordion>
+    </oru-accordion>
   `
 };
 
@@ -74,7 +74,7 @@ export const CustomIcon: Story = {
     otherProps: {}
   },
   render: ({ items, multiple, title, expanded, disabled, typographyProps, otherProps }) => html`
-    <nu-accordion
+    <oru-accordion
       .items=${items}
       ?multiple=${multiple}
       title=${title}
@@ -84,7 +84,7 @@ export const CustomIcon: Story = {
       .otherProps=${otherProps}
       .expandIcon=${html`<span>+</span>`}>
       <p style="margin: 0;">Esempio con expandIcon custom e pannello aperto.</p>
-    </nu-accordion>
+    </oru-accordion>
   `
 };
 
@@ -94,11 +94,11 @@ export const GroupSingleOpen: Story = {
     multiple: false
   },
   render: ({ items, multiple }) => html`
-    <nu-accordion
+    <oru-accordion
       .items=${items}
       ?multiple=${multiple}
       .onChange=${(_event: Event, isExpanded: boolean) => console.log('Expanded:', isExpanded)}>
-    </nu-accordion>
+    </oru-accordion>
   `
 };
 
@@ -108,11 +108,11 @@ export const GroupMultiOpen: Story = {
     multiple: true
   },
   render: ({ items, multiple }) => html`
-    <nu-accordion
+    <oru-accordion
       .items=${items}
       ?multiple=${multiple}
       .onChange=${(_event: Event, isExpanded: boolean) => console.log('Expanded:', isExpanded)}>
-    </nu-accordion>
+    </oru-accordion>
   `
 };
 
@@ -122,7 +122,7 @@ export const GroupWithPerItemSlotIcons: Story = {
     multiple: true
   },
   render: ({ items, multiple }) => html`
-    <nu-accordion .items=${items} ?multiple=${multiple}>
+    <oru-accordion .items=${items} ?multiple=${multiple}>
       <span slot="icon-0">+</span>
       <span slot="icon-1">?</span>
       <svg
@@ -135,6 +135,6 @@ export const GroupWithPerItemSlotIcons: Story = {
         aria-hidden="true">
         <path d="M12 2l4 8h8l-6 5 2 9-8-5-8 5 2-9-6-5h8z"></path>
       </svg>
-    </nu-accordion>
+    </oru-accordion>
   `
 };

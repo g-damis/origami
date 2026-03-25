@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import '@molecule_components/nu-form-row';
+import '@molecule_components/oru-form-row';
 
 const meta: Meta = {
-  title: 'Molecules/NuFormRow',
-  component: 'nu-form-row',
+  title: 'Molecules/OruFormRow',
+  component: 'oru-form-row',
   tags: ['autodocs'],
   argTypes: {
     label: { control: 'text' },
     buttonText: { control: 'text' },
-    'nu-submit': { action: 'submitted' }
+    'oru-submit': { action: 'submitted' }
   }
 };
 
@@ -22,10 +22,10 @@ export const Default: Story = {
     buttonText: 'Send'
   },
   render: ({ label, buttonText }) => html`
-    <nu-form-row
+    <oru-form-row
       label=${label}
       buttonText=${buttonText}
-      @nu-submit=${(e: CustomEvent) => console.log('Submitted value:', e.detail)}>
-    </nu-form-row>
+      @oru-submit=${(e: CustomEvent) => console.log('Submitted value:', e.detail)}>
+    </oru-form-row>
   `
 };

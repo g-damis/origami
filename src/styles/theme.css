@@ -2,26 +2,26 @@
 
 :root {
   /* Brand Colors */
-  --nu-color-primary: #e91e63; /* pink */
-  --nu-color-secondary: #3f51b5; /* indigo */
+  --oru-color-primary: #e91e63; /* pink */
+  --oru-color-secondary: #3f51b5; /* indigo */
 
   /* Typography */
-  --nu-font-family-sans: 'Helvetica Neue', sans-serif;
+  --oru-font-family-sans: 'Helvetica Neue', sans-serif;
 
   /* Radius */
-  --nu-radius-md: 6px;
-  --nu-radius-lg: 12px;
+  --oru-radius-md: 6px;
+  --oru-radius-lg: 12px;
 
   /* Transitions */
-  --nu-transition-base: 300ms;
+  --oru-transition-base: 300ms;
 }
 
 /* Dark mode example (opt-in) */
 @media (prefers-color-scheme: dark) {
   :root {
-    --nu-color-white: #121212;
-    --nu-color-black: #fafafa;
-    --nu-color-gray-100: #2c2c2c;
-    --nu-color-gray-900: #f1f1f1;
+    --oru-color-white: #121212;
+    --oru-color-black: #fafafa;
+    --oru-color-gray-100: #2c2c2c;
+    --oru-color-gray-900: #f1f1f1;
   }
 }

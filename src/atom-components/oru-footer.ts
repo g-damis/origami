@@ -1,13 +1,13 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { nuFooterStyles } from '../styles/components/nu-footer.styles.ts';
+import { oruFooterStyles } from '../styles/components/oru-footer.styles.ts';
 
-@customElement('nu-footer')
-export class NuFooter extends LitElement {
+@customElement('oru-footer')
+export class OruFooter extends LitElement {
   @property({ type: String }) text = 'Default footer text';
 
-  static styles = nuFooterStyles;
-  
+  static styles = oruFooterStyles;
+
   render() {
     return html`<footer>${this.text}</footer>`;
   }

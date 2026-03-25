@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import '@atom_components/nu-collapse';
+import '@atom_components/oru-collapse';
 
 const meta: Meta = {
-  title: 'Atoms/NuCollapse',
-  component: 'nu-collapse',
+  title: 'Atoms/OruCollapse',
+  component: 'oru-collapse',
   tags: ['autodocs'],
   argTypes: {
     open: { control: 'boolean' },
-    'nu-toggle': { action: 'toggled' }
+    'oru-toggle': { action: 'toggled' }
   }
 };
 
@@ -20,16 +20,16 @@ export const Default: Story = {
     open: false
   },
   render: ({ open }) => html`
-    <nu-collapse ?open=${open}>
+    <oru-collapse ?open=${open}>
       <div
         style="
-          padding: var(--nu-spacing-4);
-          border: 1px solid var(--nu-color-accent);
-          border-radius: var(--nu-radius-md);
-          background: var(--nu-color-gray-50);">
+          padding: var(--oru-spacing-4);
+          border: 1px solid var(--oru-color-accent);
+          border-radius: var(--oru-radius-md);
+          background: var(--oru-color-gray-50);">
         <p style="margin: 0;">Contenuto collassabile controllato dalla prop open.</p>
       </div>
-    </nu-collapse>
+    </oru-collapse>
   `
 };
 
@@ -38,30 +38,30 @@ export const ExternalControl: Story = {
     open: true
   },
   render: ({ open }) => html`
-    <div style="display: grid; gap: var(--nu-spacing-3);">
+    <div style="display: grid; gap: var(--oru-spacing-3);">
       <button
         type="button"
         style="
           width: fit-content;
-          padding: var(--nu-spacing-2) var(--nu-spacing-4);
+          padding: var(--oru-spacing-2) var(--oru-spacing-4);
           cursor: pointer;"
         @click=${(event: Event) => {
           const container = (event.currentTarget as HTMLElement).parentElement;
-          const collapse = container?.querySelector('nu-collapse') as { toggle: () => void } | null;
+          const collapse = container?.querySelector('oru-collapse') as { toggle: () => void } | null;
           collapse?.toggle();
         }}>
         Toggle esterno
       </button>
-      <nu-collapse ?open=${open}>
+      <oru-collapse ?open=${open}>
         <div
           style="
-            padding: var(--nu-spacing-4);
-            border: 1px solid var(--nu-color-accent);
-            border-radius: var(--nu-radius-md);
-            background: var(--nu-color-gray-50);">
+            padding: var(--oru-spacing-4);
+            border: 1px solid var(--oru-color-accent);
+            border-radius: var(--oru-radius-md);
+            background: var(--oru-color-gray-50);">
           <p style="margin: 0;">Questo blocco viene aperto/chiuso da un controllo esterno.</p>
         </div>
-      </nu-collapse>
+      </oru-collapse>
     </div>
   `
 };

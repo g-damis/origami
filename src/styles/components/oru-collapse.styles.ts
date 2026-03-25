@@ -1,6 +1,6 @@
 import { css } from 'lit';
 
-export const nuCollapseStyles = css`
+export const oruCollapseStyles = css`
   :host {
     display: block;
   }

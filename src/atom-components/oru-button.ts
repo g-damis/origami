@@ -1,13 +1,13 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { nuButtonStyles } from '../styles/components/nu-button.styles.ts';
+import { oruButtonStyles } from '../styles/components/oru-button.styles.ts';
 
-@customElement('nu-button')
-export class NuButton extends LitElement {
+@customElement('oru-button')
+export class OruButton extends LitElement {
   @property({ type: String }) variant: 'primary' | 'secondary' = 'primary';
   @property({ type: Boolean, reflect: true }) disabled = false;
 
-  static styles = nuButtonStyles;
+  static styles = oruButtonStyles;
 
   render() {
     return html`
@@ -19,13 +19,13 @@ export class NuButton extends LitElement {
 
   private _handleClick(e: Event) {
     if (!this.disabled) {
-      this.dispatchEvent(new CustomEvent('nu-click', { detail: e, bubbles: true, composed: true }));
+      this.dispatchEvent(new CustomEvent('oru-click', { detail: e, bubbles: true, composed: true }));
     }
   }
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    'nu-button': NuButton;
+    'oru-button': OruButton;
   }
 }

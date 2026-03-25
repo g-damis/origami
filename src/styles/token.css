@@ -3,83 +3,83 @@
 /* Color Palette */
 :root {
   /* Base palette */
-  --nu-color-white: #ffffff;
-  --nu-color-black: #000000;
+  --oru-color-white: #ffffff;
+  --oru-color-black: #000000;
 
-  --nu-color-gray-50:  #f8f9fa;
-  --nu-color-gray-100: #f1f3f5;
-  --nu-color-gray-200: #e9ecef;
-  --nu-color-gray-300: #dee2e6;
-  --nu-color-gray-600: #6c757d;
-  --nu-color-gray-900: #212529;
+  --oru-color-gray-50:  #f8f9fa;
+  --oru-color-gray-100: #f1f3f5;
+  --oru-color-gray-200: #e9ecef;
+  --oru-color-gray-300: #dee2e6;
+  --oru-color-gray-600: #6c757d;
+  --oru-color-gray-900: #212529;
 
   /* Custom palette */
-  --nu-color-rosy-granite: #9a8f97;
-  --nu-color-silver: #c3baba;
-  --nu-color-alabaster-grey: #e9e3e6;
-  --nu-color-silver-2: #b2b2b2;
-  --nu-color-crushed-berry: #881616;
+  --oru-color-rosy-granite: #9a8f97;
+  --oru-color-silver: #c3baba;
+  --oru-color-alabaster-grey: #e9e3e6;
+  --oru-color-silver-2: #b2b2b2;
+  --oru-color-crushed-berry: #881616;
 
   /* Semantic aliases */
-  --nu-color-primary: var(--nu-color-rosy-granite);
-  --nu-color-secondary: var(--nu-color-crushed-berry);
-  --nu-color-surface: var(--nu-color-alabaster-grey);
-  --nu-color-text: var(--nu-color-silver-2);
-  --nu-color-accent: var(--nu-color-silver);
-  --nu-color-on-secondary: #ffffff;
-  --nu-button-secondary-text: var(--nu-color-on-secondary);
+  --oru-color-primary: var(--oru-color-rosy-granite);
+  --oru-color-secondary: var(--oru-color-crushed-berry);
+  --oru-color-surface: var(--oru-color-alabaster-grey);
+  --oru-color-text: var(--oru-color-silver-2);
+  --oru-color-accent: var(--oru-color-silver);
+  --oru-color-on-secondary: #ffffff;
+  --oru-button-secondary-text: var(--oru-color-on-secondary);
 }
 
 /* Spacing (based on 4px scale) */
 :root {
-  --nu-spacing-0: 0px;
-  --nu-spacing-1: 4px;
-  --nu-spacing-2: 8px;
-  --nu-spacing-3: 12px;
-  --nu-spacing-4: 16px;
-  --nu-spacing-5: 20px;
-  --nu-spacing-6: 24px;
-  --nu-spacing-8: 32px;
-  --nu-spacing-10: 40px;
+  --oru-spacing-0: 0px;
+  --oru-spacing-1: 4px;
+  --oru-spacing-2: 8px;
+  --oru-spacing-3: 12px;
+  --oru-spacing-4: 16px;
+  --oru-spacing-5: 20px;
+  --oru-spacing-6: 24px;
+  --oru-spacing-8: 32px;
+  --oru-spacing-10: 40px;
 }
 
 /* Typography */
 :root {
-  --nu-font-family-sans: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --oru-font-family-sans: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 
-  --nu-font-size-xs: 0.75rem;
-  --nu-font-size-sm: 0.875rem;
-  --nu-font-size-base: 1rem;
-  --nu-font-size-lg: 1.125rem;
-  --nu-font-size-xl: 1.25rem;
+  --oru-font-size-xs: 0.75rem;
+  --oru-font-size-sm: 0.875rem;
+  --oru-font-size-base: 1rem;
+  --oru-font-size-lg: 1.125rem;
+  --oru-font-size-xl: 1.25rem;
 
-  --nu-font-weight-normal: 400;
-  --nu-font-weight-bold: 700;
+  --oru-font-weight-normal: 400;
+  --oru-font-weight-bold: 700;
 }
 
 /* Radius & Shadows */
 :root {
-  --nu-radius-none: 0px;
-  --nu-radius-sm: 2px;
-  --nu-radius-md: 4px;
-  --nu-radius-lg: 8px;
-  --nu-radius-full: 9999px;
+  --oru-radius-none: 0px;
+  --oru-radius-sm: 2px;
+  --oru-radius-md: 4px;
+  --oru-radius-lg: 8px;
+  --oru-radius-full: 9999px;
 
-  --nu-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --nu-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --nu-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+  --oru-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --oru-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --oru-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* Z-index */
 :root {
-  --nu-z-index-dropdown: 1000;
-  --nu-z-index-modal: 1100;
-  --nu-z-index-toast: 1200;
+  --oru-z-index-dropdown: 1000;
+  --oru-z-index-modal: 1100;
+  --oru-z-index-toast: 1200;
 }
 
 /* Transitions */
 :root {
-  --nu-transition-fast: 150ms;
-  --nu-transition-base: 250ms;
-  --nu-transition-slow: 400ms;
+  --oru-transition-fast: 150ms;
+  --oru-transition-base: 250ms;
+  --oru-transition-slow: 400ms;
 }

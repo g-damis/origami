@@ -1,13 +1,13 @@
 import { LitElement, html } from 'lit';
 import type { PropertyValues } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { nuCollapseStyles } from '../styles/components/nu-collapse.styles.ts';
+import { oruCollapseStyles } from '../styles/components/oru-collapse.styles.ts';
 
-@customElement('nu-collapse')
-export class NuCollapse extends LitElement {
+@customElement('oru-collapse')
+export class OruCollapse extends LitElement {
   @property({ type: Boolean, reflect: true }) open = false;
 
-  static styles = nuCollapseStyles;
+  static styles = oruCollapseStyles;
 
   show() {
     this.open = true;
@@ -26,7 +26,7 @@ export class NuCollapse extends LitElement {
       return;
     }
 
-    this.dispatchEvent(new CustomEvent('nu-toggle', {
+    this.dispatchEvent(new CustomEvent('oru-toggle', {
       detail: { open: this.open },
       bubbles: true,
       composed: true
@@ -44,6 +44,6 @@ export class NuCollapse extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'nu-collapse': NuCollapse;
+    'oru-collapse': OruCollapse;
   }
 }

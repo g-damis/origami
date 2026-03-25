@@ -1,22 +1,22 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import '@atom_components/nu-button.ts';
-import { nuFormRowStyles } from '../styles/components/nu-form-row.styles.ts';
+import '@atom_components/oru-button.ts';
+import { oruFormRowStyles } from '../styles/components/oru-form-row.styles.ts';
 
-let nuFormRowInputId = 0;
+let oruFormRowInputId = 0;
 
-@customElement('nu-form-row')
-export class NuFormRow extends LitElement {
+@customElement('oru-form-row')
+export class OruFormRow extends LitElement {
   @property({ type: String }) label = 'Label';
   @property({ type: String }) buttonText = 'Submit';
-  private readonly _inputId = `nu-form-row-input-${++nuFormRowInputId}`;
+  private readonly _inputId = `oru-form-row-input-${++oruFormRowInputId}`;
 
-  static styles = nuFormRowStyles;
+  static styles = oruFormRowStyles;
 
   private _onSubmit() {
     const input = this.renderRoot.querySelector('input');
     if (input) {
-      this.dispatchEvent(new CustomEvent('nu-submit', {
+      this.dispatchEvent(new CustomEvent('oru-submit', {
         detail: input.value,
         bubbles: true,
         composed: true
@@ -29,7 +29,7 @@ export class NuFormRow extends LitElement {
       <label for=${this._inputId}>${this.label}</label>
       <div class="controls">
         <input id=${this._inputId} type="text" />
-        <nu-button @nu-click=${this._onSubmit}>${this.buttonText}</nu-button>
+        <oru-button @oru-click=${this._onSubmit}>${this.buttonText}</oru-button>
       </div>
     `;
   }
@@ -37,6 +37,6 @@ export class NuFormRow extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'nu-form-row': NuFormRow;
+    'oru-form-row': OruFormRow;
   }
 }

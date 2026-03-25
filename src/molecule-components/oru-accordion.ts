@@ -1,46 +1,46 @@
 import { LitElement, html, nothing } from 'lit';
 import type { PropertyValues } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
-import '@atom_components/nu-collapse.ts';
-import { nuAccordionStyles } from '../styles/components/nu-accordion.styles.ts';
+import '@atom_components/oru-collapse.ts';
+import { oruAccordionStyles } from '../styles/components/oru-accordion.styles.ts';
 
-export type NuAccordionVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'body1' | 'body2';
+export type OruAccordionVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'body1' | 'body2';
 
-export interface NuAccordionTypographyProps {
-  variant?: NuAccordionVariant;
+export interface OruAccordionTypographyProps {
+  variant?: OruAccordionVariant;
 }
 
-export interface NuAccordionItem {
+export interface OruAccordionItem {
   title: string;
   content?: unknown;
   expanded?: boolean;
   disabled?: boolean;
   icon?: unknown;
   expandIcon?: unknown;
-  typographyProps?: NuAccordionTypographyProps;
+  typographyProps?: OruAccordionTypographyProps;
 }
 
-let nuAccordionId = 0;
+let oruAccordionId = 0;
 
-@customElement('nu-accordion')
-export class NuAccordion extends LitElement {
-  @property({ attribute: false }) items: NuAccordionItem[] = [];
+@customElement('oru-accordion')
+export class OruAccordion extends LitElement {
+  @property({ attribute: false }) items: OruAccordionItem[] = [];
   @property({ type: Boolean, reflect: true }) multiple = false;
   @property({ type: String }) title = 'Change this content to see how it gets overwritten';
   @property({ type: Boolean, reflect: true }) expanded = false;
   @property({ attribute: false }) expandIcon: unknown = null;
   @property({ attribute: false }) onChange: ((event: Event, isExpanded: boolean) => void) | null = null;
   @property({ attribute: false }) icon: unknown = null;
-  @property({ attribute: false }) typographyProps: NuAccordionTypographyProps = { variant: 'h2' };
+  @property({ attribute: false }) typographyProps: OruAccordionTypographyProps = { variant: 'h2' };
   @property({ type: Boolean, reflect: true }) disabled = false;
   @property({ attribute: false }) otherProps: Record<string, string | number | boolean | null | undefined> = {};
 
-  private readonly _accordionId = `nu-accordion-${++nuAccordionId}`;
-  private readonly _panelId = `nu-accordion-panel-${++nuAccordionId}`;
+  private readonly _accordionId = `oru-accordion-${++oruAccordionId}`;
+  private readonly _panelId = `oru-accordion-panel-${++oruAccordionId}`;
   @state() private _openIndexes: number[] = [];
   private _appliedOtherProps: string[] = [];
 
-  static styles = nuAccordionStyles;
+  static styles = oruAccordionStyles;
 
   show(index = 0) {
     if (this._hasItemsMode()) {
@@ -93,7 +93,7 @@ export class NuAccordion extends LitElement {
     }
 
     if (changedProperties.has('expanded') && changedProperties.get('expanded') !== undefined) {
-      this.dispatchEvent(new CustomEvent('nu-change', {
+      this.dispatchEvent(new CustomEvent('oru-change', {
         detail: {
           expanded: this.expanded,
           index: 0,
@@ -147,7 +147,7 @@ export class NuAccordion extends LitElement {
     }
 
     this._openIndexes = nextOpenIndexes;
-    this.dispatchEvent(new CustomEvent('nu-change', {
+    this.dispatchEvent(new CustomEvent('oru-change', {
       detail: {
         expanded,
         index,
@@ -219,7 +219,7 @@ export class NuAccordion extends LitElement {
     }
   }
 
-  private _getTitleVariantClass(typographyProps?: NuAccordionTypographyProps) {
+  private _getTitleVariantClass(typographyProps?: OruAccordionTypographyProps) {
     const variant = typographyProps?.variant ?? this.typographyProps.variant ?? 'h2';
     return `variant-${variant}`;
   }
@@ -258,9 +258,9 @@ export class NuAccordion extends LitElement {
                     </slot>
                   </span>
                 </button>
-                <nu-collapse id=${panelId} ?open=${isExpanded}>
+                <oru-collapse id=${panelId} ?open=${isExpanded}>
                   <div class="panel">${item.content ?? nothing}</div>
-                </nu-collapse>
+                </oru-collapse>
               </section>
             `;
           })}
@@ -291,11 +291,11 @@ export class NuAccordion extends LitElement {
               </slot>
             </span>
           </button>
-          <nu-collapse id=${this._panelId} ?open=${this.expanded}>
+          <oru-collapse id=${this._panelId} ?open=${this.expanded}>
             <div class="panel">
               <slot>${nothing}</slot>
             </div>
-          </nu-collapse>
+          </oru-collapse>
         </section>
       </div>
     `;
@@ -304,6 +304,6 @@ export class NuAccordion extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'nu-accordion': NuAccordion;
+    'oru-accordion': OruAccordion;
   }
 }

@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import '@atom_components/nu-button';
+import '@atom_components/oru-button';
 
 const meta: Meta = {
-  title: 'Atoms/NuButton',
-  component: 'nu-button',
+  title: 'Atoms/OruButton',
+  component: 'oru-button',
   tags: ['autodocs'],
   argTypes: {
     variant: {
@@ -12,7 +12,7 @@ const meta: Meta = {
       options: ['primary', 'secondary']
     },
     disabled: { control: 'boolean' },
-    'nu-click': { action: 'clicked' }
+    'oru-click': { action: 'clicked' }
   }
 };
 
@@ -25,7 +25,7 @@ export const Primary: Story = {
     disabled: false
   },
   render: ({ variant, disabled }) => html`
-    <nu-button variant=${variant} ?disabled=${disabled}>Button</nu-button>
+    <oru-button variant=${variant} ?disabled=${disabled}>Button</oru-button>
   `
 };
 
@@ -35,6 +35,6 @@ export const Secondary: Story = {
     disabled: false
   },
   render: ({ variant, disabled }) => html`
-    <nu-button variant=${variant} ?disabled=${disabled}>Button</nu-button>
+    <oru-button variant=${variant} ?disabled=${disabled}>Button</oru-button>
   `
 };
