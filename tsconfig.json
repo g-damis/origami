@@ -26,8 +26,8 @@
     /* Simply import Lit components from anywhere in the project */
     "baseUrl": "./src",
     "paths": {
-      "@atom_components/*": ["atom-components/*"],
-      "@molecule_components/*": ["molecule-components/*"],
+      "@atom_components/*": ["components/atom-components/*"],
+      "@molecule_components/*": ["components/molecule-components/*"],
       "@layout/*": ["layout/*"],
       "@style/*": ["style/*"],
       "@setup/*": ["setup/*"]
