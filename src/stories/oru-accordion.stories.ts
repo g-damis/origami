@@ -31,6 +31,7 @@ const meta: Meta = {
     disabled: { control: 'boolean' },
     typographyProps: { control: 'object' },
     otherProps: { control: 'object' },
+    expandIcon: { control: 'text', description: 'Icona custom come stringa HTML (es. "+" o "<svg>...")' },
     'oru-change': { action: 'changed' }
   }
 };
@@ -71,9 +72,10 @@ export const CustomIcon: Story = {
     expanded: true,
     disabled: false,
     typographyProps: { variant: 'h3' },
-    otherProps: {}
+    otherProps: {},
+    expandIcon: '+'
   },
-  render: ({ items, multiple, title, expanded, disabled, typographyProps, otherProps }) => html`
+  render: ({ items, multiple, title, expanded, disabled, typographyProps, otherProps, expandIcon }) => html`
     <oru-accordion
       .items=${items}
       ?multiple=${multiple}
@@ -82,7 +84,7 @@ export const CustomIcon: Story = {
       ?disabled=${disabled}
       .typographyProps=${typographyProps}
       .otherProps=${otherProps}
-      .expandIcon=${html`<span>+</span>`}>
+      .expandIcon=${expandIcon ? html`<span>${expandIcon}</span>` : null}>
       <p style="margin: 0;">Esempio con expandIcon custom e pannello aperto.</p>
     </oru-accordion>
   `

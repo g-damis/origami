@@ -1,10 +1,13 @@
 import { LitElement, html, nothing } from 'lit';
-import type { PropertyValues } from 'lit';
+import type { PropertyValues, TemplateResult } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import '@atom_components/oru-collapse.ts';
 import { oruAccordionStyles } from '../../styles/components/oru-accordion.styles.ts';
 
 export type OruAccordionVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'body1' | 'body2';
+
+/** Analogo a React.ReactNode: qualsiasi valore renderizzabile da Lit */
+export type OruNode = TemplateResult | string | number | Node | null | undefined;
 
 export interface OruAccordionTypographyProps {
   variant?: OruAccordionVariant;
@@ -12,11 +15,11 @@ export interface OruAccordionTypographyProps {
 
 export interface OruAccordionItem {
   title: string;
-  content?: unknown;
+  content?: OruNode;
   expanded?: boolean;
   disabled?: boolean;
-  icon?: unknown;
-  expandIcon?: unknown;
+  icon?: OruNode;
+  expandIcon?: OruNode;
   typographyProps?: OruAccordionTypographyProps;
 }
 
@@ -28,9 +31,9 @@ export class OruAccordion extends LitElement {
   @property({ type: Boolean, reflect: true }) multiple = false;
   @property({ type: String }) title = 'Change this content to see how it gets overwritten';
   @property({ type: Boolean, reflect: true }) expanded = false;
-  @property({ attribute: false }) expandIcon: unknown = null;
+  @property({ attribute: false }) expandIcon: OruNode = null;
   @property({ attribute: false }) onChange: ((event: Event, isExpanded: boolean) => void) | null = null;
-  @property({ attribute: false }) icon: unknown = null;
+  @property({ attribute: false }) icon: OruNode = null;
   @property({ attribute: false }) typographyProps: OruAccordionTypographyProps = { variant: 'h2' };
   @property({ type: Boolean, reflect: true }) disabled = false;
   @property({ attribute: false }) otherProps: Record<string, string | number | boolean | null | undefined> = {};
